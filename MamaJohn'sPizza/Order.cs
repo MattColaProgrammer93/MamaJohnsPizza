@@ -1,8 +1,8 @@
 namespace MamaJohn_sPizza
 {
-    public partial class Form1 : Form
+    public partial class Order : Form
     {
-        public Form1()
+        public Order()
         {
             InitializeComponent();
         }
