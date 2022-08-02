@@ -39,14 +39,14 @@
             this.rdoCrackerCrust = new System.Windows.Forms.RadioButton();
             this.rdoThinCrust = new System.Windows.Forms.RadioButton();
             this.rdoFlatbread = new System.Windows.Forms.RadioButton();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.chkPepperoni = new System.Windows.Forms.CheckBox();
+            this.chkSausage = new System.Windows.Forms.CheckBox();
+            this.chkMushrooms = new System.Windows.Forms.CheckBox();
+            this.chkBacon = new System.Windows.Forms.CheckBox();
+            this.chkPineapple = new System.Windows.Forms.CheckBox();
+            this.chkBlackOlives = new System.Windows.Forms.CheckBox();
+            this.chkBeef = new System.Windows.Forms.CheckBox();
+            this.chkHam = new System.Windows.Forms.CheckBox();
             this.grpPizzaShapes.SuspendLayout();
             this.grpToppings.SuspendLayout();
             this.grpCrustTypes.SuspendLayout();
@@ -65,20 +65,20 @@
             // 
             // grpToppings
             // 
-            this.grpToppings.Controls.Add(this.checkBox8);
-            this.grpToppings.Controls.Add(this.checkBox7);
-            this.grpToppings.Controls.Add(this.checkBox6);
-            this.grpToppings.Controls.Add(this.checkBox5);
-            this.grpToppings.Controls.Add(this.checkBox4);
-            this.grpToppings.Controls.Add(this.checkBox3);
-            this.grpToppings.Controls.Add(this.checkBox2);
-            this.grpToppings.Controls.Add(this.checkBox1);
+            this.grpToppings.Controls.Add(this.chkHam);
+            this.grpToppings.Controls.Add(this.chkBeef);
+            this.grpToppings.Controls.Add(this.chkBlackOlives);
+            this.grpToppings.Controls.Add(this.chkPineapple);
+            this.grpToppings.Controls.Add(this.chkBacon);
+            this.grpToppings.Controls.Add(this.chkMushrooms);
+            this.grpToppings.Controls.Add(this.chkSausage);
+            this.grpToppings.Controls.Add(this.chkPepperoni);
             this.grpToppings.Location = new System.Drawing.Point(330, 37);
             this.grpToppings.Name = "grpToppings";
             this.grpToppings.Size = new System.Drawing.Size(250, 176);
             this.grpToppings.TabIndex = 1;
             this.grpToppings.TabStop = false;
-            this.grpToppings.Text = "Toppings";
+            this.grpToppings.Text = "Toppings ($0.60)";
             // 
             // grpCrustTypes
             // 
@@ -177,85 +177,85 @@
             this.rdoFlatbread.Text = "Flatbread Crust";
             this.rdoFlatbread.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // chkPepperoni
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(6, 27);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(101, 24);
-            this.checkBox1.TabIndex = 5;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.chkPepperoni.AutoSize = true;
+            this.chkPepperoni.Location = new System.Drawing.Point(6, 27);
+            this.chkPepperoni.Name = "chkPepperoni";
+            this.chkPepperoni.Size = new System.Drawing.Size(98, 24);
+            this.chkPepperoni.TabIndex = 5;
+            this.chkPepperoni.Text = "Pepperoni";
+            this.chkPepperoni.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // chkSausage
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(6, 57);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(101, 24);
-            this.checkBox2.TabIndex = 6;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkSausage.AutoSize = true;
+            this.chkSausage.Location = new System.Drawing.Point(6, 57);
+            this.chkSausage.Name = "chkSausage";
+            this.chkSausage.Size = new System.Drawing.Size(86, 24);
+            this.chkSausage.TabIndex = 6;
+            this.chkSausage.Text = "Sausage";
+            this.chkSausage.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // chkMushrooms
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(6, 87);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(101, 24);
-            this.checkBox3.TabIndex = 7;
-            this.checkBox3.Text = "checkBox3";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.chkMushrooms.AutoSize = true;
+            this.chkMushrooms.Location = new System.Drawing.Point(6, 87);
+            this.chkMushrooms.Name = "chkMushrooms";
+            this.chkMushrooms.Size = new System.Drawing.Size(108, 24);
+            this.chkMushrooms.TabIndex = 7;
+            this.chkMushrooms.Text = "Mushrooms";
+            this.chkMushrooms.UseVisualStyleBackColor = true;
             // 
-            // checkBox4
+            // chkBacon
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(6, 117);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(101, 24);
-            this.checkBox4.TabIndex = 8;
-            this.checkBox4.Text = "checkBox4";
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.chkBacon.AutoSize = true;
+            this.chkBacon.Location = new System.Drawing.Point(6, 117);
+            this.chkBacon.Name = "chkBacon";
+            this.chkBacon.Size = new System.Drawing.Size(72, 24);
+            this.chkBacon.TabIndex = 8;
+            this.chkBacon.Text = "Bacon";
+            this.chkBacon.UseVisualStyleBackColor = true;
             // 
-            // checkBox5
+            // chkPineapple
             // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(113, 27);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(101, 24);
-            this.checkBox5.TabIndex = 9;
-            this.checkBox5.Text = "checkBox5";
-            this.checkBox5.UseVisualStyleBackColor = true;
+            this.chkPineapple.AutoSize = true;
+            this.chkPineapple.Location = new System.Drawing.Point(113, 27);
+            this.chkPineapple.Name = "chkPineapple";
+            this.chkPineapple.Size = new System.Drawing.Size(97, 24);
+            this.chkPineapple.TabIndex = 9;
+            this.chkPineapple.Text = "Pineapple";
+            this.chkPineapple.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // chkBlackOlives
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(113, 57);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(101, 24);
-            this.checkBox6.TabIndex = 10;
-            this.checkBox6.Text = "checkBox6";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.chkBlackOlives.AutoSize = true;
+            this.chkBlackOlives.Location = new System.Drawing.Point(113, 57);
+            this.chkBlackOlives.Name = "chkBlackOlives";
+            this.chkBlackOlives.Size = new System.Drawing.Size(110, 24);
+            this.chkBlackOlives.TabIndex = 10;
+            this.chkBlackOlives.Text = "Black Olives";
+            this.chkBlackOlives.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // chkBeef
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(113, 87);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(101, 24);
-            this.checkBox7.TabIndex = 11;
-            this.checkBox7.Text = "checkBox7";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.chkBeef.AutoSize = true;
+            this.chkBeef.Location = new System.Drawing.Point(113, 87);
+            this.chkBeef.Name = "chkBeef";
+            this.chkBeef.Size = new System.Drawing.Size(61, 24);
+            this.chkBeef.TabIndex = 11;
+            this.chkBeef.Text = "Beef";
+            this.chkBeef.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // chkHam
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(113, 117);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(101, 24);
-            this.checkBox8.TabIndex = 12;
-            this.checkBox8.Text = "checkBox8";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.chkHam.AutoSize = true;
+            this.chkHam.Location = new System.Drawing.Point(113, 117);
+            this.chkHam.Name = "chkHam";
+            this.chkHam.Size = new System.Drawing.Size(63, 24);
+            this.chkHam.TabIndex = 12;
+            this.chkHam.Text = "Ham";
+            this.chkHam.UseVisualStyleBackColor = true;
             // 
             // Order
             // 
@@ -292,13 +292,13 @@
         private RadioButton rdoThinCrust;
         private RadioButton rdoCrackerCrust;
         private RadioButton rdoStuffedCrust;
-        private CheckBox checkBox8;
-        private CheckBox checkBox7;
-        private CheckBox checkBox6;
-        private CheckBox checkBox5;
-        private CheckBox checkBox4;
-        private CheckBox checkBox3;
-        private CheckBox checkBox2;
-        private CheckBox checkBox1;
+        private CheckBox chkHam;
+        private CheckBox chkBeef;
+        private CheckBox chkBlackOlives;
+        private CheckBox chkPineapple;
+        private CheckBox chkBacon;
+        private CheckBox chkMushrooms;
+        private CheckBox chkSausage;
+        private CheckBox chkPepperoni;
     }
 }
