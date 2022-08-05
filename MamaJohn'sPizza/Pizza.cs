@@ -32,6 +32,11 @@ namespace MamaJohn_sPizza
         public string CrustType { get; set; }
 
         /// <summary>
+        /// The size of the pizza
+        /// </summary>
+        public string Size { get; set; }
+
+        /// <summary>
         /// The total cost of the pizza
         /// </summary>
         public double TotalCost { get; set; }
