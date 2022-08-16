@@ -94,7 +94,7 @@ namespace MamaJohn_sPizza
 
         private void rdoSquareShape_CheckedChanged(object sender, EventArgs e)
         {
-            shape = "sqaure"
+            shape = "sqaure";
             shapeCost = 8.00;
         }
 
