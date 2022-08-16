@@ -48,9 +48,9 @@
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.grpPizzaSize = new System.Windows.Forms.GroupBox();
-            this.rdoSmall = new System.Windows.Forms.RadioButton();
-            this.rdoMedium = new System.Windows.Forms.RadioButton();
             this.rdoLarge = new System.Windows.Forms.RadioButton();
+            this.rdoMedium = new System.Windows.Forms.RadioButton();
+            this.rdoSmall = new System.Windows.Forms.RadioButton();
             this.grpPizzaShapes.SuspendLayout();
             this.grpToppings.SuspendLayout();
             this.grpCrustTypes.SuspendLayout();
@@ -78,6 +78,7 @@
             this.rdoSquareShape.TabStop = true;
             this.rdoSquareShape.Text = "Square ($8.00)";
             this.rdoSquareShape.UseVisualStyleBackColor = true;
+            this.rdoSquareShape.CheckedChanged += new System.EventHandler(this.rdoSquareShape_CheckedChanged);
             // 
             // rdoCircleShape
             // 
@@ -89,6 +90,7 @@
             this.rdoCircleShape.TabStop = true;
             this.rdoCircleShape.Text = "Circle ($7.25)";
             this.rdoCircleShape.UseVisualStyleBackColor = true;
+            this.rdoCircleShape.CheckedChanged += new System.EventHandler(this.rdoCircleShape_CheckedChanged);
             // 
             // grpToppings
             // 
@@ -198,7 +200,7 @@
             this.grpCrustTypes.Size = new System.Drawing.Size(250, 152);
             this.grpCrustTypes.TabIndex = 2;
             this.grpCrustTypes.TabStop = false;
-            this.grpCrustTypes.Text = "Crust Types";
+            this.grpCrustTypes.Text = "Crust Types ($0.50)";
             // 
             // rdoFlatbread
             // 
@@ -210,6 +212,7 @@
             this.rdoFlatbread.TabStop = true;
             this.rdoFlatbread.Text = "Flatbread Crust";
             this.rdoFlatbread.UseVisualStyleBackColor = true;
+            this.rdoFlatbread.CheckedChanged += new System.EventHandler(this.rdoFlatbread_CheckedChanged);
             // 
             // rdoThinCrust
             // 
@@ -221,6 +224,7 @@
             this.rdoThinCrust.TabStop = true;
             this.rdoThinCrust.Text = "Thin Crust";
             this.rdoThinCrust.UseVisualStyleBackColor = true;
+            this.rdoThinCrust.CheckedChanged += new System.EventHandler(this.rdoThinCrust_CheckedChanged);
             // 
             // rdoCrackerCrust
             // 
@@ -232,6 +236,7 @@
             this.rdoCrackerCrust.TabStop = true;
             this.rdoCrackerCrust.Text = "Cracker Crust";
             this.rdoCrackerCrust.UseVisualStyleBackColor = true;
+            this.rdoCrackerCrust.CheckedChanged += new System.EventHandler(this.rdoCrackerCrust_CheckedChanged);
             // 
             // rdoStuffedCrust
             // 
@@ -243,6 +248,7 @@
             this.rdoStuffedCrust.TabStop = true;
             this.rdoStuffedCrust.Text = "Stuffed Crust";
             this.rdoStuffedCrust.UseVisualStyleBackColor = true;
+            this.rdoStuffedCrust.CheckedChanged += new System.EventHandler(this.rdoStuffedCrust_CheckedChanged);
             // 
             // btnOrder
             // 
@@ -252,6 +258,7 @@
             this.btnOrder.TabIndex = 3;
             this.btnOrder.Text = "Order";
             this.btnOrder.UseVisualStyleBackColor = true;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnExit
             // 
@@ -274,41 +281,41 @@
             this.grpPizzaSize.TabStop = false;
             this.grpPizzaSize.Text = "Pizza Size";
             // 
-            // rdoSmall
+            // rdoLarge
             // 
-            this.rdoSmall.AutoSize = true;
-            this.rdoSmall.Location = new System.Drawing.Point(11, 26);
-            this.rdoSmall.Name = "rdoSmall";
-            this.rdoSmall.Size = new System.Drawing.Size(67, 24);
-            this.rdoSmall.TabIndex = 2;
-            this.rdoSmall.TabStop = true;
-            this.rdoSmall.Text = "Small";
-            this.rdoSmall.UseVisualStyleBackColor = true;
-            this.rdoSmall.CheckedChanged += new System.EventHandler(this.rdoSmall_CheckedChanged);
+            this.rdoLarge.AutoSize = true;
+            this.rdoLarge.Location = new System.Drawing.Point(11, 86);
+            this.rdoLarge.Name = "rdoLarge";
+            this.rdoLarge.Size = new System.Drawing.Size(116, 24);
+            this.rdoLarge.TabIndex = 4;
+            this.rdoLarge.TabStop = true;
+            this.rdoLarge.Text = "Large ($2.00)";
+            this.rdoLarge.UseVisualStyleBackColor = true;
+            this.rdoLarge.CheckedChanged += new System.EventHandler(this.rdoLarge_CheckedChanged);
             // 
             // rdoMedium
             // 
             this.rdoMedium.AutoSize = true;
             this.rdoMedium.Location = new System.Drawing.Point(11, 56);
             this.rdoMedium.Name = "rdoMedium";
-            this.rdoMedium.Size = new System.Drawing.Size(85, 24);
+            this.rdoMedium.Size = new System.Drawing.Size(134, 24);
             this.rdoMedium.TabIndex = 3;
             this.rdoMedium.TabStop = true;
-            this.rdoMedium.Text = "Medium";
+            this.rdoMedium.Text = "Medium ($1.50)";
             this.rdoMedium.UseVisualStyleBackColor = true;
             this.rdoMedium.CheckedChanged += new System.EventHandler(this.rdoMedium_CheckedChanged);
             // 
-            // rdoLarge
+            // rdoSmall
             // 
-            this.rdoLarge.AutoSize = true;
-            this.rdoLarge.Location = new System.Drawing.Point(11, 86);
-            this.rdoLarge.Name = "rdoLarge";
-            this.rdoLarge.Size = new System.Drawing.Size(67, 24);
-            this.rdoLarge.TabIndex = 4;
-            this.rdoLarge.TabStop = true;
-            this.rdoLarge.Text = "Large";
-            this.rdoLarge.UseVisualStyleBackColor = true;
-            this.rdoLarge.CheckedChanged += new System.EventHandler(this.rdoLarge_CheckedChanged);
+            this.rdoSmall.AutoSize = true;
+            this.rdoSmall.Location = new System.Drawing.Point(11, 26);
+            this.rdoSmall.Name = "rdoSmall";
+            this.rdoSmall.Size = new System.Drawing.Size(116, 24);
+            this.rdoSmall.TabIndex = 2;
+            this.rdoSmall.TabStop = true;
+            this.rdoSmall.Text = "Small ($1.00)";
+            this.rdoSmall.UseVisualStyleBackColor = true;
+            this.rdoSmall.CheckedChanged += new System.EventHandler(this.rdoSmall_CheckedChanged);
             // 
             // Order
             // 
