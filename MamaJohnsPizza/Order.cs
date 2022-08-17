@@ -11,9 +11,18 @@ namespace MamaJohn_sPizza
         string size = "";
         double sizeCost = 0.00;
 
-        // The shape of the pizza
+        // The shape of the pizza and price
         string shape = "";
         double shapeCost = 0.00;
+
+        // The crust type of the pizza
+        string crustType = "";
+        double crustCost = 0.50;
+
+        // The topping cost and number of toppings
+        double topping = 0.60;
+        int numOfToppings = 8;
+
 
         // The Pizza Size Groupbox
         private void rdoSmall_CheckedChanged(object sender, EventArgs e)
@@ -41,6 +50,86 @@ namespace MamaJohn_sPizza
                 size = "Large";
                 sizeCost = 2.00;
             }
+        }
+
+        // The Crust Type GroupBox
+        private void rdoStuffedCrust_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoStuffedCrust.Checked)
+            {
+                crustType = "stuffed crust";
+            }
+        }
+
+        private void rdoCrackerCrust_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoCrackerCrust.Checked)
+            {
+                crustType = "cracker crust";
+            }
+        }
+
+        private void rdoThinCrust_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoThinCrust.Checked)
+            {
+                crustType = "thin crust";
+            }
+        }
+
+        private void rdoFlatbread_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdoFlatbread.Checked)
+            {
+                crustType = "flatbeard crust";
+            }
+        }
+
+        // The Shapes GroupBox
+        private void rdoCircleShape_CheckedChanged(object sender, EventArgs e)
+        {
+            shape = "circular";
+            shapeCost = 7.25;
+        }
+
+        private void rdoSquareShape_CheckedChanged(object sender, EventArgs e)
+        {
+            shape = "sqaure";
+            shapeCost = 8.00;
+        }
+
+        // The Toppings GroupBox
+        private double toppingTotalCost()
+        {
+            // Adding the costPerAddon together so there will be no negative number
+            double totalAddonAmount = topping * 8;
+
+            foreach (Control currControl in grpToppings.Controls)
+            {
+                if (currControl is CheckBox)
+                {
+                    CheckBox currCheckBox = currControl as CheckBox;
+                    if (currCheckBox.Checked)
+                    {
+                        totalAddonAmount += topping;
+                        numOfToppings++;
+                    }
+                    else
+                    {
+                        totalAddonAmount -= topping;
+                        numOfToppings--;
+                    }
+                }
+            }
+            return totalAddonAmount;
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            double toppingGrandTotal = toppingTotalCost();
+            double grandTotal = sizeCost + shapeCost + crustCost + topping;
+
+
         }
     }
 }
