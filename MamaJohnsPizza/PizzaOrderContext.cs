@@ -17,7 +17,7 @@ namespace MamaJohn_sPizza
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MamaJohnsPizza;Trusted_Connection=True;");
+            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=MamaJohnsPizzaStorage;Trusted_Connection=True;");
         }
 
         public DbSet<Pizza> Pizzas { get; set; }
