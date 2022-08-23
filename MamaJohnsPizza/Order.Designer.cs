@@ -51,6 +51,7 @@
             this.rdoLarge = new System.Windows.Forms.RadioButton();
             this.rdoMedium = new System.Windows.Forms.RadioButton();
             this.rdoSmall = new System.Windows.Forms.RadioButton();
+            this.btnGoToList = new System.Windows.Forms.Button();
             this.grpPizzaShapes.SuspendLayout();
             this.grpToppings.SuspendLayout();
             this.grpCrustTypes.SuspendLayout();
@@ -317,11 +318,22 @@
             this.rdoSmall.UseVisualStyleBackColor = true;
             this.rdoSmall.CheckedChanged += new System.EventHandler(this.rdoSmall_CheckedChanged);
             // 
+            // btnGoToList
+            // 
+            this.btnGoToList.Location = new System.Drawing.Point(631, 94);
+            this.btnGoToList.Name = "btnGoToList";
+            this.btnGoToList.Size = new System.Drawing.Size(125, 54);
+            this.btnGoToList.TabIndex = 6;
+            this.btnGoToList.Text = "Go to List of Orders";
+            this.btnGoToList.UseVisualStyleBackColor = true;
+            this.btnGoToList.Click += new System.EventHandler(this.btnGoToList_Click);
+            // 
             // Order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGoToList);
             this.Controls.Add(this.grpPizzaSize);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnOrder);
@@ -367,5 +379,6 @@
         private RadioButton rdoLarge;
         private RadioButton rdoMedium;
         private RadioButton rdoSmall;
+        private Button btnGoToList;
     }
 }

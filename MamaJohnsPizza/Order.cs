@@ -129,5 +129,11 @@ namespace MamaJohn_sPizza
 
             
         }
+
+        private void btnGoToList_Click(object sender, EventArgs e)
+        {
+            OrderList secondForm = new();
+            secondForm.Show();
+        }
     }
 }
