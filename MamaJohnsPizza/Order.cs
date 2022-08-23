@@ -20,8 +20,8 @@ namespace MamaJohn_sPizza
         double crustCost = 0.50;
 
         // The topping cost and number of toppings
-        double topping = 0.60;
-        int numOfToppings = 8;
+        double toppingCost = 0.60;
+        int numOfToppings = 0;
 
 
         // The Pizza Size Groupbox
@@ -102,7 +102,9 @@ namespace MamaJohn_sPizza
         private double toppingTotalCost()
         {
             // Adding the costPerAddon together so there will be no negative number
-            double totalAddonAmount = topping * 8;
+            double totalAddonAmount = 0;
+            // Number of topping checked
+            int numTopChecked = 0;
 
             foreach (Control currControl in grpToppings.Controls)
             {
@@ -111,25 +113,27 @@ namespace MamaJohn_sPizza
                     CheckBox currCheckBox = currControl as CheckBox;
                     if (currCheckBox.Checked)
                     {
-                        totalAddonAmount += topping;
-                        numOfToppings++;
-                    }
-                    else
-                    {
-                        totalAddonAmount -= topping;
-                        numOfToppings--;
+                        totalAddonAmount += toppingCost;
+                        numTopChecked++;
                     }
                 }
             }
+            numOfToppings = numTopChecked;
             return totalAddonAmount;
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
         {
             double toppingGrandTotal = toppingTotalCost();
-            double grandTotal = sizeCost + shapeCost + crustCost + topping;
+            double grandTotal = sizeCost + shapeCost + crustCost + toppingCost;
 
+            
+        }
 
+        private void btnGoToList_Click(object sender, EventArgs e)
+        {
+            OrderList secondForm = new();
+            secondForm.Show();
         }
     }
 }
