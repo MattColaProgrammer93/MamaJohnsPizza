@@ -16,5 +16,20 @@ namespace MamaJohn_sPizza
         {
             InitializeComponent();
         }
+
+        private void btnExitOrderList_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnDeleteOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstOrders_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

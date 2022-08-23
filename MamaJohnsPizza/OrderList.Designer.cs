@@ -41,6 +41,7 @@
             this.lstOrders.Name = "lstOrders";
             this.lstOrders.Size = new System.Drawing.Size(360, 224);
             this.lstOrders.TabIndex = 0;
+            this.lstOrders.SelectedIndexChanged += new System.EventHandler(this.lstOrders_SelectedIndexChanged);
             // 
             // btnExitOrderList
             // 
@@ -50,6 +51,7 @@
             this.btnExitOrderList.TabIndex = 1;
             this.btnExitOrderList.Text = "Exit";
             this.btnExitOrderList.UseVisualStyleBackColor = true;
+            this.btnExitOrderList.Click += new System.EventHandler(this.btnExitOrderList_Click);
             // 
             // btnDeleteOrder
             // 
@@ -59,6 +61,7 @@
             this.btnDeleteOrder.TabIndex = 2;
             this.btnDeleteOrder.Text = "Delete Order";
             this.btnDeleteOrder.UseVisualStyleBackColor = true;
+            this.btnDeleteOrder.Click += new System.EventHandler(this.btnDeleteOrder_Click);
             // 
             // OrderList
             // 
