@@ -10,3 +10,4 @@ The Order options includes:
 - Pizza toppings
 - The crust of the pizza
 - The size of the pizza
+- Pizza's size
