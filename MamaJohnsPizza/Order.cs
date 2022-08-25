@@ -1,3 +1,5 @@
+using MamaJohn_sPizza;
+
 namespace MamaJohn_sPizza
 {
     public partial class Order : Form
@@ -127,7 +129,18 @@ namespace MamaJohn_sPizza
             double toppingGrandTotal = toppingTotalCost();
             double grandTotal = sizeCost + shapeCost + crustCost + toppingCost;
 
-            
+            Pizza p = new()
+            {
+                Shape = shape,
+                NumOfToppings = numOfToppings,
+                CrustType = crustType,
+                Size = size,
+                TotalCost = grandTotal
+            };
+
+            using PizzaOrderContext dbContext = new();
+            dbContext.Pizzas.Add(p); 
+            dbContext.SaveChanges();
         }
 
         private void btnGoToList_Click(object sender, EventArgs e)
