@@ -73,6 +73,7 @@
             this.Controls.Add(this.lstOrders);
             this.Name = "OrderList";
             this.Text = "OrderList";
+            this.Load += new System.EventHandler(this.OrderList_Load);
             this.ResumeLayout(false);
 
         }
