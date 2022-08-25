@@ -76,7 +76,6 @@
             this.rdoSquareShape.Name = "rdoSquareShape";
             this.rdoSquareShape.Size = new System.Drawing.Size(125, 24);
             this.rdoSquareShape.TabIndex = 1;
-            this.rdoSquareShape.TabStop = true;
             this.rdoSquareShape.Text = "Square ($8.00)";
             this.rdoSquareShape.UseVisualStyleBackColor = true;
             this.rdoSquareShape.CheckedChanged += new System.EventHandler(this.rdoSquareShape_CheckedChanged);
@@ -84,6 +83,7 @@
             // rdoCircleShape
             // 
             this.rdoCircleShape.AutoSize = true;
+            this.rdoCircleShape.Checked = true;
             this.rdoCircleShape.Location = new System.Drawing.Point(19, 26);
             this.rdoCircleShape.Name = "rdoCircleShape";
             this.rdoCircleShape.Size = new System.Drawing.Size(116, 24);
@@ -210,7 +210,6 @@
             this.rdoFlatbread.Name = "rdoFlatbread";
             this.rdoFlatbread.Size = new System.Drawing.Size(130, 24);
             this.rdoFlatbread.TabIndex = 3;
-            this.rdoFlatbread.TabStop = true;
             this.rdoFlatbread.Text = "Flatbread Crust";
             this.rdoFlatbread.UseVisualStyleBackColor = true;
             this.rdoFlatbread.CheckedChanged += new System.EventHandler(this.rdoFlatbread_CheckedChanged);
@@ -222,7 +221,6 @@
             this.rdoThinCrust.Name = "rdoThinCrust";
             this.rdoThinCrust.Size = new System.Drawing.Size(95, 24);
             this.rdoThinCrust.TabIndex = 2;
-            this.rdoThinCrust.TabStop = true;
             this.rdoThinCrust.Text = "Thin Crust";
             this.rdoThinCrust.UseVisualStyleBackColor = true;
             this.rdoThinCrust.CheckedChanged += new System.EventHandler(this.rdoThinCrust_CheckedChanged);
@@ -234,7 +232,6 @@
             this.rdoCrackerCrust.Name = "rdoCrackerCrust";
             this.rdoCrackerCrust.Size = new System.Drawing.Size(116, 24);
             this.rdoCrackerCrust.TabIndex = 1;
-            this.rdoCrackerCrust.TabStop = true;
             this.rdoCrackerCrust.Text = "Cracker Crust";
             this.rdoCrackerCrust.UseVisualStyleBackColor = true;
             this.rdoCrackerCrust.CheckedChanged += new System.EventHandler(this.rdoCrackerCrust_CheckedChanged);
@@ -242,6 +239,7 @@
             // rdoStuffedCrust
             // 
             this.rdoStuffedCrust.AutoSize = true;
+            this.rdoStuffedCrust.Checked = true;
             this.rdoStuffedCrust.Location = new System.Drawing.Point(19, 26);
             this.rdoStuffedCrust.Name = "rdoStuffedCrust";
             this.rdoStuffedCrust.Size = new System.Drawing.Size(115, 24);
@@ -289,7 +287,6 @@
             this.rdoLarge.Name = "rdoLarge";
             this.rdoLarge.Size = new System.Drawing.Size(116, 24);
             this.rdoLarge.TabIndex = 4;
-            this.rdoLarge.TabStop = true;
             this.rdoLarge.Text = "Large ($2.00)";
             this.rdoLarge.UseVisualStyleBackColor = true;
             this.rdoLarge.CheckedChanged += new System.EventHandler(this.rdoLarge_CheckedChanged);
@@ -301,7 +298,6 @@
             this.rdoMedium.Name = "rdoMedium";
             this.rdoMedium.Size = new System.Drawing.Size(134, 24);
             this.rdoMedium.TabIndex = 3;
-            this.rdoMedium.TabStop = true;
             this.rdoMedium.Text = "Medium ($1.50)";
             this.rdoMedium.UseVisualStyleBackColor = true;
             this.rdoMedium.CheckedChanged += new System.EventHandler(this.rdoMedium_CheckedChanged);
@@ -309,6 +305,7 @@
             // rdoSmall
             // 
             this.rdoSmall.AutoSize = true;
+            this.rdoSmall.Checked = true;
             this.rdoSmall.Location = new System.Drawing.Point(11, 26);
             this.rdoSmall.Name = "rdoSmall";
             this.rdoSmall.Size = new System.Drawing.Size(116, 24);
