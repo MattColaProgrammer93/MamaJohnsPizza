@@ -31,6 +31,7 @@
             this.lstOrders = new System.Windows.Forms.ListBox();
             this.btnExitOrderList = new System.Windows.Forms.Button();
             this.btnDeleteOrder = new System.Windows.Forms.Button();
+            this.txtDisplay = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lstOrders
@@ -39,7 +40,7 @@
             this.lstOrders.ItemHeight = 20;
             this.lstOrders.Location = new System.Drawing.Point(62, 29);
             this.lstOrders.Name = "lstOrders";
-            this.lstOrders.Size = new System.Drawing.Size(360, 224);
+            this.lstOrders.Size = new System.Drawing.Size(366, 224);
             this.lstOrders.TabIndex = 0;
             this.lstOrders.SelectedIndexChanged += new System.EventHandler(this.lstOrders_SelectedIndexChanged);
             // 
@@ -55,7 +56,7 @@
             // 
             // btnDeleteOrder
             // 
-            this.btnDeleteOrder.Location = new System.Drawing.Point(295, 291);
+            this.btnDeleteOrder.Location = new System.Drawing.Point(535, 291);
             this.btnDeleteOrder.Name = "btnDeleteOrder";
             this.btnDeleteOrder.Size = new System.Drawing.Size(127, 61);
             this.btnDeleteOrder.TabIndex = 2;
@@ -63,11 +64,21 @@
             this.btnDeleteOrder.UseVisualStyleBackColor = true;
             this.btnDeleteOrder.Click += new System.EventHandler(this.btnDeleteOrder_Click);
             // 
+            // txtDisplay
+            // 
+            this.txtDisplay.Location = new System.Drawing.Point(463, 29);
+            this.txtDisplay.Multiline = true;
+            this.txtDisplay.Name = "txtDisplay";
+            this.txtDisplay.ReadOnly = true;
+            this.txtDisplay.Size = new System.Drawing.Size(199, 155);
+            this.txtDisplay.TabIndex = 3;
+            // 
             // OrderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 374);
+            this.ClientSize = new System.Drawing.Size(723, 374);
+            this.Controls.Add(this.txtDisplay);
             this.Controls.Add(this.btnDeleteOrder);
             this.Controls.Add(this.btnExitOrderList);
             this.Controls.Add(this.lstOrders);
@@ -75,6 +86,7 @@
             this.Text = "OrderList";
             this.Load += new System.EventHandler(this.OrderList_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -83,5 +95,6 @@
         private ListBox lstOrders;
         private Button btnExitOrderList;
         private Button btnDeleteOrder;
+        private TextBox txtDisplay;
     }
 }
