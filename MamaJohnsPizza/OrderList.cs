@@ -27,7 +27,27 @@ namespace MamaJohn_sPizza
 
         private void btnDeleteOrder_Click(object sender, EventArgs e)
         {
+            // If the selected order is not null, delete the order in the database and refresh the orderlist
+            // with new changes.
+            if (currSelectedOrder != null)
+            {
+                // Declare that the order is deleted
+                MessageBox.Show("Order is successfully deleted");
+                using PizzaOrderContext dbContext = new();
+                dbContext.Remove(dbContext.Pizzas.Single(a => a.Id == currSelectedOrder.Id));
+                dbContext.SaveChanges();
 
+                // Set currSelectedOrder to null to prevent bugs
+                currSelectedOrder = null;
+                // Set the currId to -1
+                currId = -1;
+                // Refresh list of orders
+                PopulatePizzaOrderList();
+            }
+            else
+            {
+                MessageBox.Show("Order is not selected");
+            }
         }
 
         private void lstOrders_SelectedIndexChanged(object sender, EventArgs e)
@@ -64,6 +84,8 @@ namespace MamaJohn_sPizza
         /// </summary>
         private void PopulatePizzaOrderList()
         {
+            lstOrders.Items.Clear();
+
             using PizzaOrderContext dbContext = new();
             List<Pizza> list = dbContext.Pizzas.ToList();
 
